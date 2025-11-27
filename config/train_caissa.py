@@ -16,8 +16,8 @@ wandb_run_name = 'caissa-puzzles-12m'
 
 dataset = 'chess-data'
 gradient_accumulation_steps = 4
-batch_size = 512
-block_size = 128 # context of up to 256 previous characters
+batch_size = 1024
+block_size = 128 # context of up to 128 previous characters
 
 # baby GPT model :)
 n_layer = 8
