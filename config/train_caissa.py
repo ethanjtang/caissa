@@ -3,9 +3,9 @@
 
 init_from = 'scratch'
 out_dir = 'out-caissa'
-eval_interval = 1000 # keep frequent because we'll overfit
+eval_interval = 10000 # keep frequent because we'll overfit
 eval_iters = 200
-log_interval = 100 # don't print too too often
+log_interval = 1000 # don't print too too often
 
 # we expect to overfit on this small dataset, so only save when val improves
 always_save_checkpoint = False
