@@ -60,9 +60,9 @@ echo "=========================================="
 echo "Sampling from trained model"
 echo "=========================================="
 echo "Test sample LLM without prompt"
-python sample.py --out_dir=output
+python sample.py --out_dir=out-caissa
 
 echo "Test sample LLM with prompts"
-python sample.py --start="FILE:./prompts/sample_M1_puzzle.txt" --out_dir=output
-python sample.py --start="FILE:./prompts/sample_superGM_puzzle.txt" --out_dir=output
+python sample.py --start="FILE:./prompts/sample_M1_puzzle.txt" --out_dir=out-caissa
+python sample.py --start="FILE:./prompts/sample_superGM_puzzle.txt" --out_dir=out-caissa
 
