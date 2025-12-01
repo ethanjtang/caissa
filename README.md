@@ -3,8 +3,6 @@
 
 Chess-based LLM trained exclusively on position + best move pairs without game context. Aims to explore the limits of natural-language-based processing for chess tasks along with searchless evaluation.  
 
-Originally forked from karpathy's nanoGPT repository.
-
 ## install
 
 ```
