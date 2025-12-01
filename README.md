@@ -3,7 +3,7 @@
 
 Chess-based LLM trained exclusively on position + best move pairs without game context. Aims to explore the limits of natural-language-based processing for chess tasks along with searchless evaluation.  
 
-## install
+## Installation and Dependencies
 
 ```
 # For .\train-caissa and .\caissa-v.0
@@ -26,25 +26,34 @@ Dependencies for .\evaluate-caissa and .\create-train-val-puzzle-sets:
 
 - [pytorch](https://pytorch.org) <3
 
-## create-train-val-puzzle-sets
+## Dataset (create-train-val-puzzle-sets)
 
-## train-caissa
-
+## Training (train-caissa)
 
 All code in the .\train-caissa directory (which was used to train Caissa [duh!]) was initially forked from Andrej Karpathy's nanoGPT repository. I did not change much of the code besides tweaking settings related to output directories and config settings. I also did not explore any advanced techniques beyond the initial LLM training such as fine-tuning or RAG.
 
 Additionally, I have included the file main_job.sh which I used to submit a supercompute job on ASU's Sol supercomputer to train Caissa.
 
-## evaluate-caissa
+You can train your own model in reasonable time (or unreasonable time if you don't have a GPU) by running the commands in the .\train-caissa directory's README.
 
-## todos
+## Evaluation (evaluate-caissa)
+
+## Results (results)
+
+
+## Models
+
+All Caissa v.0 checkpoints (500k, 1mil, 1.5mil iterations) are located in the directory .\caissa-v.0.
+
+## TODOs
 
 - Train existing models for a larger number of iterations and/or optimize config file train_caissa.py
 - Gather large dataset of position + best move pairs in the format FEN-Bestmove using Stockfish 17 at depth=20.
-- Retrain model with identical config to Caissa c.0, test ability to play full games. Currently, Caissa v.0 shows very good performance for chess puzzle-type positions which only capture two types of positions: 
+- Retrain model with identical config to Caissa v.0 and test ability to play full games. Currently, Caissa v.0 shows very good performance for chess puzzle-type positions which only capture two types of positions: 
     1. One side to move and win with significant advantage. 
     2. One side to move and draw ("saving" the game from a "lost" position).
-- Train an even larger model on a larger/higher quality dataset -> Repeat indefinitely 
+There are many other types of positions including balanced positions without a "best" or "only" move (aka non-critical positions). Additionally, these puzzle-type positions do not have a lot of positions in the opening stages of a chess game (moves 0-15), which explains Caissa v.0's struggle to generate valid/legal moves from the starting position.
+- Train an even larger model on a larger/higher quality dataset -> Repeat indefinitely!!!
 
 ## acknowledgements
 
