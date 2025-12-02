@@ -1,5 +1,5 @@
 
-# Caissa (nanoGPT fork)
+# Caissa-v.0 (nanoGPT fork)
 
 Chess-based LLM trained exclusively on position + best move pairs without game context.
 
