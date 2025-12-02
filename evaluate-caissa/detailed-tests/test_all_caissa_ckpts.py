@@ -256,8 +256,8 @@ class GPTChessTester:
                 correct_move = position['best_move']
 
                 # Generate move (use very low temperature for deterministic results)
-                # number of tokens = 20
-                output, response_time = self.generate_move(fen, max_new_tokens=20, temperature=0.01, top_k=1)
+                # number of tokens = 10
+                output, response_time = self.generate_move(fen, max_new_tokens=10, temperature=0.01, top_k=1)
                 extracted_move = self.extract_move_from_output(output, fen)
 
                 # Accumulate response time

@@ -827,13 +827,13 @@ def main():
     output_json_path = os.path.join(script_dir, "SGM_n=10_tests.json")
 
     # Stockfish path
-    stockfish_path = r"C:\Users\ejtan\OneDrive\Desktop\lichess-puzzle-data-for-llms\the-big-fish\stockfish-windows-x86-64-avx2.exe"
+    stockfish_path = r"\the-big-fish\stockfish-windows-x86-64-avx2.exe"
 
     # Caissa checkpoint paths
     caissa_checkpoints = {
-        'caissa-iters-500k': r"C:\Users\ejtan\OneDrive\Desktop\lichess-puzzle-data-for-llms\compare-diff-caissa-iters\models\caissa_iters_500k.pt",
-        'caissa-iters-1m': r"C:\Users\ejtan\OneDrive\Desktop\lichess-puzzle-data-for-llms\compare-diff-caissa-iters\models\caissa_iters_1m.pt",
-        'caissa-iters-1.5m': r"C:\Users\ejtan\OneDrive\Desktop\lichess-puzzle-data-for-llms\compare-diff-caissa-iters\models\caissa_iters_1.5m.pt"
+        'caissa-iters-500k': r"\models\caissa_iters_500k.pt",
+        'caissa-iters-1m': r"\models\caissa_iters_1m.pt",
+        'caissa-iters-1.5m': r"\models\caissa_iters_1.5m.pt"
     }
 
     print("="*100)
