@@ -1,3 +1,7 @@
+This code is almost identical to karpathy's nanoGPT so I would start by forking that instead of attempting to develop from here.
+
+I used the following commands to train the LLM Caissa:
+
 # Preparing training data
 python data/chess-data/prepare.py
 
