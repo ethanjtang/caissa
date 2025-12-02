@@ -8,7 +8,8 @@ Please note that I decided to nest everything when developing so some things are
 
 # test_openai_models_reasoning.py
 
-Run to test different OpenAI models using their API on a random sample of chess puzzles from the validation set. You can set specific themes you want to test as well! Results all saved in JSON files.
+Run to test different OpenAI models using their API on a random sample of chess puzzles from the validation set. 
+You can set specific themes you want to test as well! Results all saved in JSON files.
 
 # test_all_caissa_ckpts.py
 
