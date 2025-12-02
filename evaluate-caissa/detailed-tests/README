@@ -1,7 +1,7 @@
 # Preconditions
 
 Parse and clean puzzle data -> Train LLM on puzzle data as position + best move pairs.
-You need to point to a valid .ckpt file to test your LLM.
+You need to point to a valid .pt file to test your LLM.
 You also need an OpenAI API key set in .env. Don't publish it!!!!!!!!
 
 Please note that I decided to nest everything when developing so some things are most definitely broken.
