@@ -4,16 +4,6 @@ Make sure to download the puzzles from Lichess's open-source database into a .CS
 https://database.lichess.org/#puzzles
 There are also many paths you will need to change because I kept nesting folders to "stay organized" during development.
 
-'''
-python extract_puzzles.py
-python analyze_puzzle_token_count.py
-python clean_training_puzzles.py
-python count_number_of_puzzles
-python
-python
-python
-'''
-
 # extract_puzzles.py
 
 Run to extract puzzles into an aggregated training set and validation sample sorted by puzzle theme.
@@ -22,7 +12,6 @@ Note that each puzzle theme may have more than the minimum puzzles allocated for
 # clean_training_puzzles.py
 
 Run to remove <puzzle-start/> and <puzzle-end/> tags from training set.
-
 
 # remove_duplicates.py
 
