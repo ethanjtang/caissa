@@ -3,7 +3,6 @@ package*
 __pycache__*
 *.exe
 *.csv
-*.json
 *.txt
 *.pt
 *.pkl
