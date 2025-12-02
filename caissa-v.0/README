@@ -1,3 +1,4 @@
 # Caissa v.0
+
 All 3 .pt files for each Caissa model at a specific checkpoint (500k, 1m, 1.5m iterations) are included here.
 meta_final.pkl contains the vocabulary for all 3 Caissa checkpoints.
