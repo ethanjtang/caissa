@@ -5,7 +5,7 @@ I performed two sets of tests, one to test overall chess understanding/knowledge
 Themes included: mate_in_1, mate_in_2, mate_in_3, one_move, middlegame, endgame, zugzwang (also known as zuggie in some circles), crushing, master_vs_master, superGM
 2. Tested GPT-5 (medium/minimal), GPT-5-mini (minimal), GPT-5-nano (minimal), Stockfish 17 (thinktime=0.01s,0.05s,0.10s,0.15s), Caissa-v0-iters-1.5m on a small test suite of n=10 superGM theme puzzles to measure response times.
 
-# Graphics
+# Graphics (.\results\graphics)
 
 The directory .\graphics contains graphics with various stats such as:
 - Overall puzzle accuracy rate for full n=1000 puzzle set for each model (Did the model find all the best moves for a puzzle?)
@@ -15,7 +15,7 @@ The directory .\graphics contains graphics with various stats such as:
 - Average tokens per response (per puzzle position) for the speed n=10 puzzle set on the SuperGM theme
 - Average response time (per puzzle position) for the speed n=10 puzzle set on the SuperGM theme
 
-# Results (JSONs)
+# Results (.\results\JSONs)
 
 The directory .\JSONs contains the final results files.
 
