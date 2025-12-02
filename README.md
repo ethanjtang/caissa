@@ -50,7 +50,7 @@ Tested GPT-5 (medium/minimal), GPT-5-mini (minimal), GPT-5-nano (minimal), Stock
 
 ## Results (.\results)
 
-This folder contains graphics (in .\graphics) of Test #1 and #2 performed during Evaluation. It also includes the raw JSON files (in .\JSONs) with each model's results in case someone wishes to replicate my tests.
+This folder contains graphics (in .\results\graphics) of Test #1 and #2 performed during Evaluation. It also includes the raw JSON files (in .\results\JSONs) with each model's results in case someone wishes to replicate my tests.
 
 ## Models (.\caissa-v.0)
 
