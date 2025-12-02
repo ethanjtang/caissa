@@ -8,25 +8,21 @@ Chess-based LLM trained exclusively on position + best move pairs without game c
 ```
 # For .\train-caissa and .\caissa-v.0
 pip install torch numpy transformers datasets tiktoken wandb tqdm
+
 # For .\evaluate-caissa and .\create-train-val-puzzle-sets
-pip install 
+pip install torch tiktoken openai python-dotenv chess pickle json matplotlib numpy
 ```
 
-Dependencies for .\train-caissa and .\caissa-v.0:
+You will also need an OpenAI API key in your .env file to test the different GPT models on the validation suite.
 
-- [pytorch](https://pytorch.org) <3
-- [numpy](https://numpy.org/install/) <3
--  `transformers` for huggingface transformers <3 (to load GPT-2 checkpoints)
--  `datasets` for huggingface datasets <3 (if you want to download + preprocess OpenWebText)
--  `tiktoken` for OpenAI's fast BPE code <3
--  `wandb` for optional logging <3
--  `tqdm` for progress bars <3
+## Subdirectory READMEs
 
-Dependencies for .\evaluate-caissa and .\create-train-val-puzzle-sets:
-
-- [pytorch](https://pytorch.org) <3
+I have included another README file in each subdirectory with more details. This top-level README provides a top-levle explanation of what this repository is and what each folder was used for.
 
 ## Dataset (.\create-train-val-puzzle-sets)
+
+I gathered the dataset for training Caissa from [https://database.lichess.org/#puzzles](Lichess's open source puzzle database).
+The provided files parse the CSV data into a single text file for training data, along with holding out a sample for validation. Additional functionality includes filtering all validation puzzle positions from the initial training data along with counting the number of positions + puzzles.
 
 ## Training (.\train-caissa)
 
@@ -38,12 +34,22 @@ You can train your own model in reasonable time (or unreasonable time if you don
 
 ## Evaluation (.\evaluate-caissa)
 
+I performed two sets of tests for overall model accuracy/sanity along with model speed (response time per puzzle).
+
+Test #1: Evaluate overall model accuracy and sanity on a large set of chess puzzles.
+Tested GPT-5 (minimal), GPT-5-mini (minimal), GPT-5-nano (minimal), GPT-3.5-turbo, Stockfish 17 (thinktime=1s), Caissa-v0-iters-500k, Caissa-v0-iters-1m, Caissa-v0-iters-1.5m on a comprehensive test suite of n=1000 puzzles. 
+Themes included: mate_in_1, mate_in_2, mate_in_3, one_move, middlegame, endgame, zugzwang (also known as zuggie in some circles), crushing, master_vs_master, superGM 
+
+Test #2: Evaluate model speed (response times) for a small sample of chess puzzles.
+Tested GPT-5 (medium/minimal), GPT-5-mini (minimal), GPT-5-nano (minimal), Stockfish 17 (thinktime=0.01s,0.05s,0.10s,0.15s), Caissa-v0-iters-1.5m on a small test suite of n=10 superGM theme puzzles to measure response times.
+
 ## Results (.\results)
 
+This folder contains graphics of Test #1 and #2 performed during Evaluation. It also includes the raw JSON files with each model's results in case someone wishes to replicate my tests.
 
-## Models
+## Models (.\caissa-v.0)
 
-All Caissa v.0 checkpoints (500k, 1mil, 1.5mil iterations) are located in the directory .\caissa-v.0.
+A Google drive link is included in the README for .\caissa-v.0, including all Caissa v.0 checkpoints (500k, 1mil, 1.5mil iterations) and its vocabulary file.
 
 ## TODOs
 
@@ -54,7 +60,7 @@ All Caissa v.0 checkpoints (500k, 1mil, 1.5mil iterations) are located in the di
     2. One side to move and draw ("saving" the game from a "lost" position).
 - Train an even larger model on a larger/higher quality dataset -> Repeat indefinitely!!!
 
-## acknowledgements
+## Acknowledgements
 
 All code in the .\train-caissa directory was initially forked from Andrej Karpathy's nanoGPT repository.
 
